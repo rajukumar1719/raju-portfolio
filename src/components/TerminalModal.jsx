@@ -7,7 +7,7 @@ export default function TerminalModal({ isOpen, onClose }) {
   const [history, setHistory] = useState([
     { text: '==========================================================', type: 'system' },
     { text: '  RAJU KUMAR // DEVELOPER CLI v2.6.0', type: 'system-title' },
-    { text: '  IIIT Bhopal - MCA (IT) Candidate | Full-Stack & Systems', type: 'system-sub' },
+    { text: '  IIIT Bhopal - MCA (IT) Student | Software Engineering Intern Candidate', type: 'system-sub' },
     { text: '==========================================================', type: 'system' },
     { text: 'Type "help" to view available commands, or "projects" to view work.', type: 'info' },
   ]);

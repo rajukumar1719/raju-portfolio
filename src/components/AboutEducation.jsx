@@ -50,8 +50,8 @@ export default function AboutEducation() {
                   <Code className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-white">Full-Stack Engineer & Problem Solver</h3>
-                  <p className="text-xs font-mono text-slate-400">MCA Candidate @ IIIT Bhopal</p>
+                  <h3 className="text-lg font-bold text-white">Aspiring Software Engineer & Problem Solver</h3>
+                  <p className="text-xs font-mono text-slate-400">MCA Student @ IIIT Bhopal</p>
                 </div>
               </div>
 

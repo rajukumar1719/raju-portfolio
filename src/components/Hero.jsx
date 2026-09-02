@@ -58,7 +58,7 @@ export default function Hero({ onOpenTerminal, onOpenResume }) {
                 Raju Kumar
               </span>
               <span className="block mt-2.5 text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-200">
-                <span className="text-gradient">Software Engineer</span> & MCA Candidate at{' '}
+                <span className="text-gradient">Software Engineering Intern Candidate</span> & MCA Student at{' '}
                 <span className="text-gradient font-mono">IIIT Bhopal</span>
               </span>
             </h1>
@@ -161,7 +161,7 @@ export default function Hero({ onOpenTerminal, onOpenResume }) {
                     <span className="text-purple-400">#include</span> <span className="text-emerald-300">&lt;distributed_systems&gt;</span>
                   </p>
                   <div className="pt-2">
-                    <span className="text-blue-400">struct</span> <span className="text-yellow-300">SoftwareEngineer</span> &#123;
+                    <span className="text-blue-400">struct</span> <span className="text-yellow-300">SoftwareEngineeringIntern</span> &#123;
                   </div>
                   <div className="pl-4 space-y-1 text-slate-300">
                     <p><span className="text-cyan-400">string</span> name = <span className="text-emerald-300">"Raju Kumar"</span>;</p>
@@ -177,7 +177,7 @@ export default function Hero({ onOpenTerminal, onOpenResume }) {
                   <div className="pt-2">
                     <span className="text-cyan-400">void</span> <span className="text-yellow-300">deployImpact</span>() &#123;
                     <div className="pl-4 text-emerald-400">
-                      std::cout &lt;&lt; <span className="text-emerald-300">"Ready for High-Impact Software Roles"</span> &lt;&lt; std::endl;
+                      std::cout &lt;&lt; <span className="text-emerald-300">"Ready for High-Impact Software Engineering Internships"</span> &lt;&lt; std::endl;
                     </div>
                     &#125;
                   </div>

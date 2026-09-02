@@ -1,6 +1,6 @@
-# ⚡ Raju Kumar — Software Engineer Portfolio
+# ⚡ Raju Kumar — Software Engineering Intern Candidate & MCA Student @ IIIT Bhopal
 
-> World-class, modern, and high-performance developer portfolio website for **Raju Kumar**, MCA (IT) Candidate at the **Indian Institute of Information Technology, Bhopal (IIIT Bhopal)**.
+> World-class, modern, and high-performance developer portfolio website for **Raju Kumar**, Software Engineering Intern Candidate & MCA Student at the **Indian Institute of Information Technology, Bhopal (IIIT Bhopal)**.
 
 🌐 **Live Website**: [https://raju-kumar-portfolio-seven.vercel.app](https://raju-kumar-portfolio-seven.vercel.app)
 

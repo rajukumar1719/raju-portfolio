@@ -76,7 +76,7 @@ export default function ResumeModal({ isOpen, onClose }) {
               RAJU KUMAR
             </h1>
             <p className="text-xs font-mono text-cyan-400 mt-1">
-              Full-Stack Developer • MCA (IT) Student @ IIIT Bhopal
+              Software Engineering Intern Candidate • MCA (IT) Student @ IIIT Bhopal
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-slate-400 font-mono mt-3">
