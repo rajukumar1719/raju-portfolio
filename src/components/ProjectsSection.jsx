@@ -87,12 +87,12 @@ export default function ProjectsSection() {
                   <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition mb-1 font-display">
                     {project.title}
                   </h3>
-                  <p className="text-xs font-mono text-cyan-400 mb-3 line-clamp-1">
+                  <p className="text-xs font-mono text-cyan-400 mb-3">
                     // {project.tagline}
                   </p>
 
                   {/* Description */}
-                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-5 line-clamp-3">
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-5">
                     {project.description}
                   </p>
 
@@ -113,7 +113,7 @@ export default function ProjectsSection() {
                     <div className="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-semibold mb-1">
                       Key Highlights:
                     </div>
-                    {project.highlights.slice(0, 3).map((h, i) => (
+                    {project.highlights.map((h, i) => (
                       <div key={i} className="flex items-start gap-2">
                         <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5" />
                         <span className="text-[11px] leading-snug">{h}</span>
@@ -144,7 +144,7 @@ export default function ProjectsSection() {
                       className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700/80 text-xs font-medium text-slate-200 hover:text-white transition"
                     >
                       <Github className="w-3.5 h-3.5" />
-                      <span>Repo</span>
+                      <span>GitHub</span>
                     </a>
 
                     {/* Live Demo / Docs */}
@@ -152,7 +152,7 @@ export default function ProjectsSection() {
                       href={project.links.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-600 text-slate-950 text-xs font-bold hover:opacity-90 transition shadow-sm"
+                      className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-600 text-slate-950 text-xs font-bold hover:opacity-90 transition shadow-sm"
                     >
                       <ExternalLink className="w-3.5 h-3.5" />
                       <span>{hasLiveDemo ? 'Live Demo' : 'Docs'}</span>

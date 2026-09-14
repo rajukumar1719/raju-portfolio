@@ -163,7 +163,7 @@ export const portfolioData = {
   projects: [
     {
       id: "syncdraw",
-      title: "SyncDraw — Real-Time Collaborative Canvas",
+      title: "SyncDraw — Real-Time Collaborative Drawing Canvas",
       tagline: "Real-Time Collaborative Drawing Canvas",
       role: "Full-Stack & Real-Time Systems Developer",
       timeline: "2026 – Present",
