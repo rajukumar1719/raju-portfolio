@@ -63,7 +63,7 @@ export default function CommandPalette({
       id: 'sec-projects',
       category: 'Navigation',
       title: 'Jump to Featured Projects',
-      subtitle: 'CampusHire MERN, MindForge AI Study Workspace & AI Resume Matcher',
+      subtitle: 'SyncDraw Real-Time Canvas, CampusHire, MindForge AI & AI Resume Matcher',
       icon: FolderGit2,
       action: () => {
         onClose();

@@ -50,14 +50,16 @@ export default function ProjectsSection() {
           </div>
         </div>
 
-        {/* Projects Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Projects Cards Grid (2x2 Balanced Layout) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
           {projects.map((project) => {
+            const isSyncDraw = project.id === 'syncdraw';
             const isCampusHire = project.id === 'campus-hire';
             const isMindForge = project.id === 'mindforge';
-            const hasLiveDemo = isCampusHire || isMindForge;
+            const hasLiveDemo = Boolean(project.links?.demo);
 
-            let gradientBorder = 'from-emerald-400 via-cyan-500 to-indigo-500';
+            let gradientBorder = 'from-emerald-400 via-teal-500 to-cyan-500';
+            if (isSyncDraw) gradientBorder = 'from-cyan-400 via-blue-500 to-indigo-600';
             if (isCampusHire) gradientBorder = 'from-cyan-500 via-blue-500 to-indigo-600';
             if (isMindForge) gradientBorder = 'from-indigo-500 via-purple-500 to-cyan-400';
 

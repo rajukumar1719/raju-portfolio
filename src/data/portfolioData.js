@@ -33,9 +33,9 @@ export const portfolioData = {
     },
     {
       id: "projects",
-      value: "3+",
+      value: "4+",
       label: "Production-Grade Projects",
-      subtext: "Full-Stack Web & Applied AI",
+      subtext: "Full-Stack, Real-Time & AI",
       icon: "Layers",
       color: "cyan"
     },
@@ -110,13 +110,14 @@ export const portfolioData = {
       icon: "Globe",
       color: "indigo",
       skills: [
-        { name: "React.js", level: "Advanced", highlight: "Hooks, Context API, Component Lifecycle", tag: "Frontend" },
+        { name: "React.js / React 19", level: "Advanced", highlight: "Hooks, Context API, Component Lifecycle", tag: "Frontend" },
+        { name: "Socket.IO / WebSockets", level: "Proficient", highlight: "Real-time bidirectional event streams, room isolation", tag: "Real-Time" },
         { name: "Next.js", level: "Intermediate", highlight: "SSR, SSG, App Router basics", tag: "Full-Stack" },
         { name: "Node.js", level: "Proficient", highlight: "Event-driven runtime, streams, micro-services", tag: "Backend" },
         { name: "Express.js", level: "Proficient", highlight: "Middleware, Routing, JWT Auth, REST APIs", tag: "Backend" },
         { name: "REST APIs", level: "Advanced", highlight: "API design, CRUD, status codes, documentation", tag: "Architecture" },
         { name: "Tailwind CSS", level: "Advanced", highlight: "Modern responsive styling, dark mode, animations", tag: "Styling" },
-        { name: "HTML5 / CSS3", level: "Advanced", highlight: "Semantic markup, Flexbox, CSS Grid, Responsive", tag: "Core Web" }
+        { name: "HTML5 / Canvas API", level: "Advanced", highlight: "High-DPI rendering, semantic markup, responsive UI", tag: "Core Web" }
       ]
     },
     {
@@ -160,6 +161,34 @@ export const portfolioData = {
   ],
 
   projects: [
+    {
+      id: "syncdraw",
+      title: "SyncDraw — Real-Time Collaborative Canvas",
+      tagline: "Real-Time Collaborative Drawing Canvas",
+      role: "Full-Stack & Real-Time Systems Developer",
+      timeline: "2026 – Present",
+      status: "Featured Production Project",
+      category: "Real-Time Systems & WebSockets",
+      description: "Real-time collaborative drawing canvas built with React, TypeScript, HTML Canvas, Node.js and Socket.IO, featuring live cursors, collaborative history, offline recovery, performance optimization, and production-grade security.",
+      techStack: ["React 19", "TypeScript", "Vite", "HTML Canvas API", "Node.js", "Express", "Socket.IO", "WebSockets", "Tailwind CSS"],
+      highlights: [
+        "Engineered real-time multi-user drawing synchronization with high-DPI native HTML Canvas rendering and optimistic local-first state.",
+        "Implemented pen, highlighter, object-level eraser, and collaborative undo/redo with author-scoped history tracking.",
+        "Built live remote cursor sharing and presence broadcasting with smooth interpolation and active user indicator badges.",
+        "Developed network reconnection handling with offline operation queue, server-side stroke validation, rate limiting, and room isolation."
+      ],
+      architecture: {
+        frontend: "React 19 & TypeScript with native HTML Canvas API, custom pointer event batching, and high-DPI scaling.",
+        realtime: "Socket.IO bidirectional event stream with optimistic rendering and author-scoped collaborative history.",
+        backend: "Node.js & Express server with room-based session management, payload validation, and connection resilience.",
+        security: "Server-side input sanitization, rate limiting, room isolation, and unified production build serving."
+      },
+      links: {
+        github: "https://github.com/rajukumar1719/syncdraw",
+        demo: "https://syncdraw-production.up.railway.app"
+      },
+      accentColor: "cyan"
+    },
     {
       id: "campus-hire",
       title: "CampusHire",

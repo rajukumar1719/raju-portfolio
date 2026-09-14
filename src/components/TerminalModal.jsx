@@ -102,7 +102,7 @@ export default function TerminalModal({ isOpen, onClose }) {
           { text: `* LeetCode & CodeChef: 150+ Problems Solved in C++`, type: 'emerald' },
           { text: `* MCA (IT) CGPA @ IIIT Bhopal: 7.0 / 10.0`, type: 'text' },
           { text: `* BCA CGPA @ Ranchi University: 8.76 / 10.0 (First Class Distinction)`, type: 'text' },
-          { text: `* Flagship Projects: 3 Production-Grade Web & AI Deployments`, type: 'text' },
+          { text: `* Flagship Projects: 4 Production-Grade Real-Time, Web & AI Deployments`, type: 'text' },
           { text: `* Internships: 2 (Web Dev & Cybersecurity)`, type: 'text' }
         );
         break;

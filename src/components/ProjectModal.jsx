@@ -89,6 +89,35 @@ export default function ProjectModal({ project, onClose }) {
               <span>Architectural Modules & Pipelines</span>
             </h4>
 
+            {project.id === 'syncdraw' && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono">
+                <div className="p-3 rounded-xl bg-slate-900 border border-slate-800">
+                  <div className="text-cyan-300 font-bold mb-1">1. High-DPI Canvas Rendering Engine</div>
+                  <p className="text-slate-400 text-[11px]">
+                    Native HTML Canvas API with DPI scaling, pointer event batching, pen, highlighter, and object-level eraser.
+                  </p>
+                </div>
+                <div className="p-3 rounded-xl bg-slate-900 border border-slate-800">
+                  <div className="text-indigo-300 font-bold mb-1">2. Real-Time WebSocket Sync</div>
+                  <p className="text-slate-400 text-[11px]">
+                    Socket.IO event streams broadcasting live stroke data, remote cursor vectors, and presence across rooms.
+                  </p>
+                </div>
+                <div className="p-3 rounded-xl bg-slate-900 border border-slate-800">
+                  <div className="text-emerald-300 font-bold mb-1">3. Collaborative History & Offline Queue</div>
+                  <p className="text-slate-400 text-[11px]">
+                    Author-scoped undo/redo stack, collaborative clear, and optimistic local queue with auto-reconnection.
+                  </p>
+                </div>
+                <div className="p-3 rounded-xl bg-slate-900 border border-slate-800">
+                  <div className="text-purple-300 font-bold mb-1">4. Server Validation & Security</div>
+                  <p className="text-slate-400 text-[11px]">
+                    Room isolation, payload sanitization, WebSocket rate limiting, and unified Express serving.
+                  </p>
+                </div>
+              </div>
+            )}
+
             {project.id === 'campus-hire' && (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono">
                 <div className="p-3 rounded-xl bg-slate-900 border border-slate-800">
@@ -218,7 +247,7 @@ export default function ProjectModal({ project, onClose }) {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-600 text-slate-950 text-xs font-bold hover:opacity-90 transition"
             >
               <ExternalLink className="w-4 h-4" />
-              <span>{(project.id === 'campus-hire' || project.id === 'mindforge') ? 'Live Demo' : 'Architecture Docs'}</span>
+              <span>{project.links.demo ? 'Live Demo' : 'Architecture Docs'}</span>
             </a>
           </div>
         </div>

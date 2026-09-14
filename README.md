@@ -22,16 +22,21 @@
 
 ## 🚀 Featured Projects
 
-1. **CampusHire — Placement Management Platform (MERN)**
+1. **SyncDraw — Real-Time Collaborative Drawing Canvas**
+   - Real-time multi-user drawing synchronization with Socket.IO, native HTML Canvas, live cursors, collaborative history, and offline recovery.
+   - 🔗 [Live Demo](https://syncdraw-production.up.railway.app) • [GitHub](https://github.com/rajukumar1719/syncdraw)
+
+2. **CampusHire — Placement Management Platform (MERN)**
    - Role-based access control (RBAC), JWT authentication, candidate tracking pipeline.
-   - 🔗 [Live Demo](https://campus-placement-portal-murex.vercel.app/)
+   - 🔗 [Live Demo](https://campus-placement-portal-murex.vercel.app/) • [GitHub](https://github.com/rajukumar1719)
 
-2. **MindForge — AI Study Workspace (Full-Stack & Applied AI)**
+3. **MindForge — AI Study Workspace (Full-Stack & Applied AI)**
    - AI-driven study workspace with LLM tutoring, smart flashcard matrix, and document management.
-   - 🔗 [Live Demo](https://mindforge-ai-study-workspace.vercel.app/)
+   - 🔗 [Live Demo](https://mindforge-ai-study-workspace.vercel.app/) • [GitHub](https://github.com/rajukumar1719)
 
-3. **AI-Powered Resume Recommendation Engine**
-   - Automated NLP preprocessing, TF-IDF vectorization, Cosine Similarity matching engine (0–100%).
+4. **AI-Powered Resume Recommendation Engine**
+   - Automated NLP preprocessing, TF-IDF vectorization, Cosine Similarity matching engine.
+   - 🔗 [Live Demo](https://ai-resume-matcher-engine.vercel.app) • [GitHub](https://github.com/rajukumar1719)
 
 ---
 
