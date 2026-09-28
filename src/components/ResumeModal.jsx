@@ -103,8 +103,8 @@ export default function ResumeModal({ isOpen, onClose }) {
                 github.com/rajukumar1719
               </a>
               <span>•</span>
-              <a href="https://linkedin.com/in/raju-kumar" target="_blank" rel="noreferrer" className="text-indigo-400 hover:underline">
-                linkedin.com/in/raju-kumar
+              <a href="https://www.linkedin.com/in/raju-kumar-5b6168311/" target="_blank" rel="noreferrer" className="text-indigo-400 hover:underline">
+                linkedin.com/in/raju-kumar-5b6168311
               </a>
             </div>
           </div>

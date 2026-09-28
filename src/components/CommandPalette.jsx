@@ -164,10 +164,10 @@ export default function CommandPalette({
       id: 'act-linkedin',
       category: 'External Links',
       title: 'Open LinkedIn Profile',
-      subtitle: 'linkedin.com/in/raju-kumar',
+      subtitle: 'linkedin.com/in/raju-kumar-5b6168311',
       icon: Linkedin,
       action: () => {
-        window.open('https://linkedin.com/in/raju-kumar', '_blank');
+        window.open('https://www.linkedin.com/in/raju-kumar-5b6168311/', '_blank');
         onClose();
       }
     }

@@ -17,7 +17,7 @@ export const portfolioData = {
     phone: "+91-8210199794",
     socials: {
       github: "https://github.com/rajukumar1719",
-      linkedin: "https://linkedin.com/in/raju-kumar",
+      linkedin: "https://www.linkedin.com/in/raju-kumar-5b6168311/",
       leetcode: "https://leetcode.com/rajukumar1719"
     }
   },

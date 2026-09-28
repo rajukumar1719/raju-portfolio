@@ -113,7 +113,7 @@ export default function TerminalModal({ isOpen, onClose }) {
           { text: `Academic Email: 24p03f0043@iiitbhopal.ac.in`, type: 'cyan' },
           { text: `Phone: +91-8210199794`, type: 'emerald' },
           { text: `GitHub: https://github.com/rajukumar1719`, type: 'text' },
-          { text: `LinkedIn: https://linkedin.com/in/raju-kumar`, type: 'text' }
+          { text: `LinkedIn: https://www.linkedin.com/in/raju-kumar-5b6168311/`, type: 'text' }
         );
         break;
 
