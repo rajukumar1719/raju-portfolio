@@ -21,6 +21,7 @@ export default function ContactSection({ onShowToast }) {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [errorMsg, setErrorMsg] = useState(null);
 
   const handleCopy = (text, label) => {
     navigator.clipboard.writeText(text);
@@ -33,19 +34,75 @@ export default function ContactSection({ onShowToast }) {
     }, 2500);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) return;
-    
+    if (submitting) return;
+
+    setErrorMsg(null);
+
+    const trimmedName = formData.name.trim();
+    const trimmedEmail = formData.email.trim();
+    const trimmedSubject = formData.subject.trim();
+    const trimmedMessage = formData.message.trim();
+
+    if (!trimmedName) {
+      setErrorMsg('Please enter your name.');
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!trimmedEmail || !emailRegex.test(trimmedEmail)) {
+      setErrorMsg('Please enter a valid work email address.');
+      return;
+    }
+
+    if (!trimmedMessage) {
+      setErrorMsg('Please enter your message.');
+      return;
+    }
+
     setSubmitting(true);
-    setTimeout(() => {
-      setSubmitting(false);
-      setSubmitted(true);
-      if (onShowToast) {
-        onShowToast('Message simulated successfully! Raju Kumar will get back to you soon.');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          name: trimmedName,
+          email: trimmedEmail,
+          subject: trimmedSubject || 'Inquiry via Developer Portfolio',
+          message: trimmedMessage,
+        }),
+      });
+
+      const data = await response.json().catch(() => ({}));
+
+      if (response.ok && data.success) {
+        setSubmitted(true);
+        setErrorMsg(null);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        if (onShowToast) {
+          onShowToast("Message sent successfully! I'll get back to you soon.");
+        }
+      } else {
+        const message = data.error || "Unable to send the message right now. Please try again or contact me directly.";
+        setErrorMsg(message);
+        if (onShowToast) {
+          onShowToast('Unable to send message.');
+        }
       }
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    }, 1200);
+    } catch (err) {
+      console.error('Contact submit error:', err);
+      setErrorMsg("Unable to send the message right now. Please try again or contact me directly.");
+      if (onShowToast) {
+        onShowToast('Network error while sending message.');
+      }
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const scrollToTop = () => {
@@ -219,10 +276,10 @@ export default function ContactSection({ onShowToast }) {
                   </div>
                   <h4 className="font-bold text-white text-base">Message Sent Successfully!</h4>
                   <p className="text-xs text-slate-300">
-                    Thank you for reaching out. Raju Kumar will review your note and respond promptly.
+                    Message sent successfully! I'll get back to you soon.
                   </p>
                   <button
-                    onClick={() => setSubmitted(false)}
+                    onClick={() => { setSubmitted(false); setErrorMsg(null); }}
                     className="text-xs text-cyan-400 hover:underline font-mono pt-2"
                   >
                     Send another message
@@ -230,6 +287,13 @@ export default function ContactSection({ onShowToast }) {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
+                  {errorMsg && (
+                    <div className="p-3.5 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-300 text-xs flex items-start gap-2.5">
+                      <span className="w-2 h-2 rounded-full bg-rose-400 shrink-0 mt-1.5"></span>
+                      <div className="flex-1 leading-relaxed">{errorMsg}</div>
+                    </div>
+                  )}
+
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-mono text-slate-400 mb-1.5">
@@ -290,10 +354,13 @@ export default function ContactSection({ onShowToast }) {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="w-full py-3 rounded-xl bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-slate-950 font-bold text-xs tracking-wide shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 transition flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                    className="w-full py-3 rounded-xl bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-slate-950 font-bold text-xs tracking-wide shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 transition flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {submitting ? (
-                      <span>Sending Message...</span>
+                      <div className="flex items-center justify-center gap-2">
+                        <span className="w-3.5 h-3.5 border-2 border-slate-950 border-t-transparent rounded-full animate-spin"></span>
+                        <span>Sending Message...</span>
+                      </div>
                     ) : (
                       <>
                         <Send className="w-4 h-4 text-slate-950" />
