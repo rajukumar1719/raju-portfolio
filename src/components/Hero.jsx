@@ -189,12 +189,15 @@ export default function Hero({ onOpenTerminal, onOpenResume }) {
                     <CheckCircle2 className="w-3.5 h-3.5" />
                     <span>0 Errors • Optimized</span>
                   </div>
-                  <button 
-                    onClick={onOpenResume}
-                    className="text-cyan-400 hover:underline flex items-center gap-1"
+                  <a 
+                    href="/resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-cyan-400 hover:text-cyan-300 hover:underline flex items-center gap-1 focus:outline-none"
+                    title="Open Official Resume PDF in new tab"
                   >
                     <span>View ATS Resume</span> &rarr;
-                  </button>
+                  </a>
                 </div>
 
               </div>

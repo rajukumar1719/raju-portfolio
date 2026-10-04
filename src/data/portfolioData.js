@@ -2,7 +2,8 @@ export const portfolioData = {
   personal: {
     name: "Raju Kumar",
     fullName: "Raju Kumar",
-    handle: "RK.dev",
+    handle: "Raju Kumar",
+    resumeUrl: "/resume.pdf",
     role: "Software Engineering Intern Candidate & MCA Student at IIIT Bhopal",
     badge: "IIIT Bhopal '27",
     status: "Open to Software Engineering & Full-Stack Internships",

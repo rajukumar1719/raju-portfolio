@@ -49,13 +49,34 @@ export default function ResumeModal({ isOpen, onClose }) {
           </div>
 
           <div className="flex items-center gap-2">
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-medium text-slate-200 hover:text-white transition"
+              title="Open Original Resume PDF in New Tab"
+            >
+              <ExternalLink className="w-3.5 h-3.5 text-cyan-400" />
+              <span>Open PDF</span>
+            </a>
+
+            <a
+              href="/resume.pdf"
+              download="Raju_Kumar_Resume.pdf"
+              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-xs font-bold text-slate-950 transition shadow-sm"
+              title="Download Uploaded Resume PDF"
+            >
+              <Download className="w-3.5 h-3.5" />
+              <span>Download PDF</span>
+            </a>
+
             <button
               onClick={handlePrint}
-              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-medium text-slate-200 hover:text-white transition"
+              className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-medium text-slate-200 hover:text-white transition"
               title="Print or Save as PDF"
             >
-              <Printer className="w-3.5 h-3.5 text-cyan-400" />
-              <span>Print / Save PDF</span>
+              <Printer className="w-3.5 h-3.5 text-slate-300" />
+              <span>Print</span>
             </button>
 
             <button

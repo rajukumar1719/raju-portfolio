@@ -42,6 +42,7 @@ export default function TerminalModal({ isOpen, onClose }) {
           { text: '  experience   - Display industry internships (Eimple Labs, Cyber Gyan)', type: 'text' },
           { text: '  education    - Display academic details (IIIT Bhopal, Ranchi Univ)', type: 'text' },
           { text: '  stats        - Show LeetCode DSA & competitive programming metrics', type: 'text' },
+          { text: '  resume       - Open official resume PDF in a new tab', type: 'text' },
           { text: '  contact      - Display verified emails and phone number', type: 'text' },
           { text: '  matrix       - Enter cyberpunk developer sequence', type: 'text' },
           { text: '  clear        - Clear terminal history', type: 'text' },
@@ -104,6 +105,14 @@ export default function TerminalModal({ isOpen, onClose }) {
           { text: `* BCA CGPA @ Ranchi University: 8.76 / 10.0 (First Class Distinction)`, type: 'text' },
           { text: `* Flagship Projects: 4 Production-Grade Real-Time, Web & AI Deployments`, type: 'text' },
           { text: `* Internships: 2 (Web Dev & Cybersecurity)`, type: 'text' }
+        );
+        break;
+
+      case 'resume':
+        window.open('/resume.pdf', '_blank', 'noopener,noreferrer');
+        newHistory.push(
+          { text: '* Opening official resume PDF in a new tab: /resume.pdf', type: 'emerald' },
+          { text: '  Direct Link: https://raju-kumar-portfolio-seven.vercel.app/resume.pdf', type: 'cyan' }
         );
         break;
 

@@ -127,13 +127,16 @@ export default function Navbar({ onOpenResume, onOpenTerminal, onOpenCommandPale
             </button>
 
             {/* View Resume Button */}
-            <button
-              onClick={onOpenResume}
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900/70 border border-slate-700/80 hover:border-cyan-500/50 text-xs font-medium text-slate-200 hover:text-cyan-300 transition"
+              title="Open Official Resume PDF"
             >
               <FileText className="w-3.5 h-3.5 text-cyan-400" />
               <span>Resume</span>
-            </button>
+            </a>
 
             {/* Get in Touch CTA */}
             <a
@@ -195,13 +198,16 @@ export default function Navbar({ onOpenResume, onOpenTerminal, onOpenCommandPale
                 <span>CLI Terminal</span>
               </button>
 
-              <button
-                onClick={() => { setMobileMenuOpen(false); onOpenResume(); }}
-                className="flex items-center justify-center gap-2 py-2 px-3 rounded-lg bg-slate-900 border border-slate-700 text-xs font-medium text-slate-200"
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+                className="flex items-center justify-center gap-2 py-2 px-3 rounded-lg bg-slate-900 border border-slate-700 text-xs font-medium text-slate-200 hover:text-cyan-300 transition"
               >
                 <FileText className="w-3.5 h-3.5 text-cyan-400" />
                 <span>View Resume</span>
-              </button>
+              </a>
             </div>
 
             <a

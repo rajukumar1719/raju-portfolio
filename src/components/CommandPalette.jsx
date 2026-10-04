@@ -14,7 +14,8 @@ import {
   Github, 
   Linkedin, 
   ArrowRight,
-  Sparkles
+  Sparkles,
+  Download
 } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
@@ -106,12 +107,27 @@ export default function CommandPalette({
     {
       id: 'act-resume',
       category: 'Actions',
-      title: 'View & Export Resume',
-      subtitle: 'Open ATS-friendly verified resume modal',
+      title: 'Open Official Resume (PDF)',
+      subtitle: 'Open latest verified resume PDF in a new tab',
       icon: FileText,
       action: () => {
         onClose();
-        onOpenResume();
+        window.open('/resume.pdf', '_blank', 'noopener,noreferrer');
+      }
+    },
+    {
+      id: 'act-download-resume',
+      category: 'Actions',
+      title: 'Download Resume (PDF)',
+      subtitle: 'Download Raju_Kumar_Resume.pdf to your device',
+      icon: Download,
+      action: () => {
+        onClose();
+        const a = document.createElement('a');
+        a.href = '/resume.pdf';
+        a.download = 'Raju_Kumar_Resume.pdf';
+        a.click();
+        if (onShowToast) onShowToast('Downloading official resume PDF...');
       }
     },
     {
