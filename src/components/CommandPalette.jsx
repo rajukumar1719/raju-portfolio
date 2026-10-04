@@ -145,12 +145,12 @@ export default function CommandPalette({
       id: 'act-copy-email',
       category: 'Actions',
       title: 'Copy Primary Email',
-      subtitle: 'rajukumarranchil7@gmail.com',
+      subtitle: 'rajukumarranchi17@gmail.com',
       icon: Mail,
       action: () => {
-        navigator.clipboard.writeText('rajukumarranchil7@gmail.com');
+        navigator.clipboard.writeText('rajukumarranchi17@gmail.com');
         onClose();
-        if (onShowToast) onShowToast('Copied rajukumarranchil7@gmail.com to clipboard!');
+        if (onShowToast) onShowToast('Copied rajukumarranchi17@gmail.com to clipboard!');
       }
     },
     {

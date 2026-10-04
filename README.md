@@ -61,7 +61,7 @@ npm run build
 
 ## 📬 Contact & Connect
 
-- **Email**: [rajukumarranchil7@gmail.com](mailto:rajukumarranchil7@gmail.com) | [24p03f0043@iiitbhopal.ac.in](mailto:24p03f0043@iiitbhopal.ac.in)
+- **Email**: [rajukumarranchi17@gmail.com](mailto:rajukumarranchi17@gmail.com) | [24p03f0043@iiitbhopal.ac.in](mailto:24p03f0043@iiitbhopal.ac.in)
 - **Phone**: +91-8210199794
 - **GitHub**: [github.com/rajukumar1719](https://github.com/rajukumar1719)
 - **LinkedIn**: [linkedin.com/in/raju-kumar-5b6168311](https://www.linkedin.com/in/raju-kumar-5b6168311/)

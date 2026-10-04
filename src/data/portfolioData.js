@@ -12,7 +12,7 @@ export const portfolioData = {
     subheadline: "Specializing in scalable full-stack web architectures, core data structures, and applied AI systems.",
     aboutText: `Detail-oriented software developer with a strong grasp of Data Structures, Algorithms, Object-Oriented Programming (OOP), and the full Software Development Life Cycle (SDLC). Currently pursuing Master of Computer Applications (MCA - IT) at Indian Institute of Information Technology (IIIT Bhopal). Experienced in crafting robust REST APIs, modern web interfaces, and collaborating in agile teams. Always driven by building software that is scalable, performant, and reliable.`,
     emails: [
-      { address: "rajukumarranchil7@gmail.com", label: "Personal Email", primary: true },
+      { address: "rajukumarranchi17@gmail.com", label: "Personal Email", primary: true },
       { address: "24p03f0043@iiitbhopal.ac.in", label: "Academic Email (IIIT Bhopal)" }
     ],
     phone: "+91-8210199794",

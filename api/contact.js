@@ -122,7 +122,7 @@ Reply-To: ${trimmedEmail}
       const resend = new Resend(process.env.RESEND_API_KEY);
       const fromEmail = process.env.RESEND_FROM_EMAIL || 'Portfolio Contact <onboarding@resend.dev>';
 
-      const data = await resend.emails.send({
+      const { data: resendData, error: resendError } = await resend.emails.send({
         from: fromEmail,
         to: [TO_EMAIL],
         replyTo: trimmedEmail,
@@ -131,17 +131,28 @@ Reply-To: ${trimmedEmail}
         html: htmlBody,
       });
 
-      if (data.error) {
-        console.error('Resend error:', data.error);
+      if (resendError) {
+        console.error('Resend API error:', resendError);
         return res.status(500).json({
           success: false,
-          error: 'Email delivery failed via Resend: ' + (data.error.message || 'Unknown error')
+          error: 'Resend delivery failed: ' + (resendError.message || JSON.stringify(resendError)),
+          details: resendError,
         });
       }
 
+      if (!resendData || !resendData.id) {
+        console.error('Resend returned no email ID:', resendData);
+        return res.status(500).json({
+          success: false,
+          error: 'Resend did not confirm email delivery. Please check Resend dashboard.'
+        });
+      }
+
+      console.log('Resend email sent successfully! Message ID:', resendData.id);
       return res.status(200).json({
         success: true,
-        message: 'Message delivered successfully via Resend.'
+        message: 'Message delivered successfully via Resend.',
+        id: resendData.id
       });
     }
 

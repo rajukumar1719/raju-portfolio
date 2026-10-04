@@ -118,7 +118,7 @@ export default function TerminalModal({ isOpen, onClose }) {
 
       case 'contact':
         newHistory.push(
-          { text: `Primary Email: rajukumarranchil7@gmail.com`, type: 'cyan' },
+          { text: `Primary Email: rajukumarranchi17@gmail.com`, type: 'cyan' },
           { text: `Academic Email: 24p03f0043@iiitbhopal.ac.in`, type: 'cyan' },
           { text: `Phone: +91-8210199794`, type: 'emerald' },
           { text: `GitHub: https://github.com/rajukumar1719`, type: 'text' },

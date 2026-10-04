@@ -106,8 +106,8 @@ export default function ResumeModal({ isOpen, onClose }) {
                 Bhopal / Ranchi, India
               </span>
               <span>•</span>
-              <a href="mailto:rajukumarranchil7@gmail.com" className="hover:text-cyan-300">
-                rajukumarranchil7@gmail.com
+              <a href="mailto:rajukumarranchi17@gmail.com" className="hover:text-cyan-300">
+                rajukumarranchi17@gmail.com
               </a>
               <span>•</span>
               <a href="mailto:24p03f0043@iiitbhopal.ac.in" className="hover:text-cyan-300">
